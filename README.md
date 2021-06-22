@@ -1,0 +1,2 @@
+# triviajs
+TriviaJS - API Javascript
