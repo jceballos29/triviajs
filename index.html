@@ -1,144 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=""width=device-width, initial-scale="1.0">
     <title>TriviaJS</title>
     <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="cover-page" id="cover-page">
-      <div class="name">
-        <h1>Trivia</h1>
-        <span>JS</span>
-      </div>
-      <div class="right-side">
-        <div class="current-score">
-          <h2>Top Scores</h2>
-          <div class="scores" id="scores"></div>
-        </div>
-        <button id="welcome">Bienvenido →</button>
-      </div>
-    </div>
-
-    <div class="user" id="user">
-      <div class="modal" id="userModal">
-        <h3>Welcome</h3>
-        <p>To be able to register your score, enter your name:</p>
-        <input type="text" id="name" value="anonymous" required autofocus />
-        <div class="options">
-          <button class="btn-success" id="continue">Continue</button>
-          <button class="btn-cancel" id="cancel">Cancel</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="trivia" id="trivia">
-      <form action="" id="triviaForm">
-        <div class="form-name">
-          <h2>Trivia</h2>
-          <span>JS</span>
-        </div>
-
-        <div class="question-field">
-          <label for="amount">Number of Questions: </label>
-          <input type="number" id="amount" min="0" class="amount" value="10" />
-        </div>
-
-        <div class="question-field">
-          <label for="category">Select Category: </label>
-          <select name="" id="category">
-            <option value="any">Any Category</option>
-            <option value="27">Animals</option>
-            <option value="25">Art</option>
-            <option value="26">Celebrities</option>
-            <option value="10">Entertainment: Books</option>
-            <option value="11">Entertainment: Film</option>
-            <option value="12">Entertainment: Music</option>
-            <option value="13">Entertainment: Musicals &amp; Theatres</option>
-            <option value="14">Entertainment: Television</option>
-            <option value="15">Entertainment: Video Games</option>
-            <option value="16">Entertainment: Board Games</option>
-            <option value="31">Entertainment: Japanese Anime &amp; Manga</option>
-            <option value="32">Entertainment: Cartoon &amp; Animations</option>
-            <option value="29">Entertainment: Comics</option>
-            <option value="9">General Knowledge</option>
-            <option value="22">Geography</option>
-            <option value="23">History</option>
-            <option value="20">Mythology</option>
-            <option value="17">Science &amp; Nature</option>
-            <option value="18">Science: Computers</option>
-            <option value="19">Science: Mathematics</option>
-            <option value="30">Science: Gadgets</option>
-            <option value="21">Sports</option>
-            <option value="24">Politics</option>
-            <option value="28">Vehicles</option>
-          </select>
-        </div>
-
-        <div class="question-field">
-          <label for="difficulty">Select Difficulty: </label>
-          <select name="" id="difficulty">
-            <option value="0">Any Difficulty</option>
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-          </select>
-        </div>
-
-        <div class="question-field">
-          <label for="type">Select Type: </label>
-          <select name="" id="type">
-            <option value="0">Any Type</option>
-            <option value="multiple">Multiple Choice</option>
-            <option value="boolean">True / False</option>
-          </select>
-        </div>
-
-        <button type="submit">Start</button>
-      </form>
-    </div>
-
-    <div class="containerQuesiton" id="containerQuesiton">
-      <div id="questions" class="questions">
-        <div class="question-header">
-          <h2 id="categoryName"></h2>
-          <div class="username">
-            <h3 id="userName"></h3>
-            <h3 id="userPoints"></h3>
-          </div>
-        </div>
-
-        <div class="content-questions" id="questionsContent">
-          <div class="countdown"></div>
-          <div class="currentQuestion">
-            <div id="questionName"></div>
-            <div class="question-items">
-              <button id="1" type="button" class="answer">Ans 1</button>
-              <button id="2" type="button" class="answer">Ans 2</button>
-              <button id="3" type="button" class="answer">Ans 3</button>
-              <button id="4" type="button" class="answer">Ans 4</button>
+    rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"
+  />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="coverPage" id="coverPage">
+            <div class="name">
+                <h2>Trivia</h1>
+                <h1>JS</h1>
             </div>
-          </div>
+            <div class="content">
+                <div id="first"class="first">
+                    <div class="top-scores">
+                        <h2>Top Scores</h2>
+                        <div class="table-scores" id="table-scores">
+                            <div class="player">
+                                <i class="fas fa-caret-right"></i>
+                                <h3>Juan Ceballos</h3>
+                                <p>3000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="ingresar">Ingresar</button>
+                </div>
+                <div class="user" id="user">
+                    <h2>Bienvenido</h3>
+                    <p>Para poder guadar un registro de la puntuación ingrese su nombre:</p>
+                    <input type="text" id="userName" value="anonymous" required autofocus />
+                    <div class="options">
+                        <button class="continue" id="continue">Continuar</button>
+                        <button class="cancel" id="cancel">Cancelar</button>
+                    </div>
+                </div>
+                <form action="" id="trivia">
+                    <div class="question-container">
+                        <div class="question-field">
+                        <label for="amount">Número de preguntas: </label>
+                        <input type="number" id="amount" min="0" class="amount" value="10" />
+                        </div>
+                
+                        <div class="question-field">
+                        <label for="category">Categoría: </label>
+                        <select name="" id="category">
+                            <option value="0">Cualquier categoría</option>
+                            <option value="9">Cultura general</option>
+                            <option value="10">Libros</option>
+                            <option value="11">Películas</option>
+                            <option value="12">Música</option>
+                            <option value="13">Musicales y teatros</option>
+                            <option value="14">Televisión</option>
+                            <option value="15">Videojuegos</option>
+                            <option value="16">Juegos de mesa</option>
+                            <option value="17">Ciencia y naturaleza</option>
+                            <option value="18">Computación</option>
+                            <option value="19">Matemáticas</option>
+                            <option value="20">Mitología</option>
+                            <option value="21">Deportes</option>
+                            <option value="22">Geografía</option>
+                            <option value="23">Historia</option>
+                            <option value="24">Política</option>
+                            <option value="25">Arte</option>
+                            <option value="26">Celebridades</option>
+                            <option value="27">Animales</option>
+                            <option value="28">Autos</option>
+                            <option value="29">Comics</option>
+                            <option value="30">Gadgets</option>
+                            <option value="31">Ánime y manga</option>
+                            <option value="32">Caricaturas</option>
+                        </select>
+                        </div>
+                
+                        <div class="question-field">
+                        <label for="difficulty">Dificultad: </label>
+                        <select name="" id="difficulty">
+                            <option value="0">Cualquier dificultad</option>
+                            <option value="easy">Fácil</option>
+                            <option value="medium">Moderada</option>
+                            <option value="hard">Difícil</option>
+                        </select>
+                        </div>
+                
+                        <div class="question-field">
+                        <label for="type">Tipo de pregunta: </label>
+                        <select name="" id="type">
+                            <option value="0">Cualquier tipo</option>
+                            <option value="multiple">Opción Múltiple</option>
+                            <option value="boolean">Verdadero / Falso</option>
+                        </select>
+                        </div>
+                    </div>
+                    <button type="submit" id="start">Comenzar</button>
+                </form>
+            </div>
+
         </div>
 
-        <div class="pagination">
-          <span id="question_index"></span> | <span id="num_questions"></span>
+        <div id="game" class="game">
+            <div class="header">
+                <h2 id="categoryName"></h2>
+                <div class="scoreBoard">
+                    <p>Usuario:  <span id="name"></span></p>
+                    <p>Score: <span id="score"></span></p>
+                </div>
+            </div>
+            <div class="body">
+                <p id="question"></p>
+                <div class="buttons" id="buttons">
+                    <button id="1" class="buttonChoise"></button>
+                    <button id="2" class="buttonChoise"></button>
+                    <button id="3" class="buttonChoise"></button>
+                    <button id="4" class="buttonChoise"></button>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="countQuestions">
+                    <span id="currentQuestion"></span><i class="fas fa-grip-lines-vertical"></i><span id="totalQuestions"></span>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <div class="endGame" id="endGame">
+            <h2>Fin del Juego</h2>
+            <div class="results" id="results">
+
+            </div>
+            <button id="begin">Aceptar</button>
+        </div>
     </div>
+    
 
     <script src="main.js"></script>
-  </body>
+</body>
 </html>
